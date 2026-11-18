@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "claude-skills",
+  "description": "Benjamin Vial's skills: own skills plus vetted copies of external ones.",
+  "owner": {
+    "name": "Benjamin Vial"
+  },
+  "plugins": [
+    {
+      "name": "skills",
+      "source": "./plugins/skills",
+      "description": "All skills and subagents in one plugin."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+name: sync external skills
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"  # Mondays, 06:17 Paris time (winter)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Move pins to upstream HEAD and copy skills
+        id: sync
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo 'log<<EOF'
+            python scripts/sync.py --bump
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: sync/external-skills
+          delete-branch: true
+          commit-message: "chore: sync external skills to upstream HEAD"
+          title: "Sync external skills to upstream HEAD"
+          body: |
+            Weekly sync of the external skills listed in `vendor.json`.
+
+            Review the diff before merging: each skill is a prompt that runs with your permissions.
+
+            ```
+            ${{ steps.sync.outputs.log }}
+            ```

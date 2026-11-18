@@ -2,7 +2,10 @@
   "caveman": {
     "repo": "JuliusBrussee/caveman",
     "ref": "a192894723a8f47e7f504c7b5041967ff1f18e55",
-    "license": ["LICENSE", "LICENSE-MIT"],
+    "license": [
+      "LICENSE",
+      "LICENSE-MIT"
+    ],
     "skills": {
       "caveman": "skills/caveman",
       "caveman-commit": "skills/caveman-commit",
@@ -13,7 +16,9 @@
   "mattpocock": {
     "repo": "mattpocock/skills",
     "ref": "5863806dd4e15c63174bee4e7515a4256792ecfa",
-    "license": ["LICENSE"],
+    "license": [
+      "LICENSE"
+    ],
     "skills": {
       "code-review": "skills/engineering/code-review",
       "codebase-design": "skills/engineering/codebase-design",
@@ -35,7 +40,9 @@
   "impeccable": {
     "repo": "pbakaus/impeccable",
     "ref": "d41d9860b0094dcb68030657da63461212835aaa",
-    "license": ["LICENSE"],
+    "license": [
+      "LICENSE"
+    ],
     "skills": {
       "impeccable": "plugin/skills/impeccable"
     },
@@ -50,7 +57,9 @@
   "python-skills": {
     "repo": "wdm0006/python-skills",
     "ref": "4ee48eb8a54b722e7c78da5e0aca8187eedbf988",
-    "license": ["LICENSE"],
+    "license": [
+      "LICENSE"
+    ],
     "skills": {
       "designing-python-apis": "skills/python/api-design"
     }
@@ -58,7 +67,9 @@
   "avoid-ai-writing": {
     "repo": "conorbronsdon/avoid-ai-writing",
     "ref": "a5d6bae7c0d762dbcff74ca86c17a7ac9fee4151",
-    "license": ["LICENSE"],
+    "license": [
+      "LICENSE"
+    ],
     "skills": {
       "avoid-ai-writing": "plugins/avoid-ai-writing/skills/avoid-ai-writing"
     }

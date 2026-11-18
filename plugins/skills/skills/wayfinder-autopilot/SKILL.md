@@ -8,7 +8,7 @@ Wayfinder on **autopilot**. You are the main agent driving a whole effort in one
 
 ## Base procedures
 
-These skills are user-invoked, so read their `SKILL.md` files directly. Take the highest version under `~/.claude/plugins/cache/claude-plugins-official/mattpocock-skills/*/skills/engineering/<skill>/SKILL.md`:
+These skills are user-invoked, so read their `SKILL.md` files directly. They ship in the same plugin as this skill, at `../<skill>/SKILL.md` relative to this file:
 
 - `wayfinder` before step 1. It defines the map, tickets, ticket types, fog of war, out of scope and refer-by-name, and it defers storage to the repo's tracker doc ("Wayfinding operations").
 - `to-tickets` before step 4.

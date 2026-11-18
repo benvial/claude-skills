@@ -98,7 +98,16 @@ def main() -> None:
     written: list[str] = []
     for name, up in manifest.items():
         archive = fetch(up["repo"], up["ref"])
-        for dest_name, src in up.get("skills", {}).items():
+        skills = dict(up.get("skills", {}))
+        if "plugin" in up:
+            # Take every skill the upstream plugin ships, so additions and
+            # removals upstream arrive with the next bump.
+            member = archive.getmember(f"{archive.getnames()[0].split('/')[0]}/{up['plugin']}")
+            with archive.extractfile(member) as fh:
+                for path in json.load(fh)["skills"]:
+                    path = path.removeprefix("./").rstrip("/")
+                    skills.setdefault(Path(path).name, path)
+        for dest_name, src in skills.items():
             dest = PLUGIN / "skills" / dest_name
             remove(dest)
             extract(archive, src, dest)

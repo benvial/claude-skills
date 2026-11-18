@@ -19,23 +19,7 @@
     "license": [
       "LICENSE"
     ],
-    "skills": {
-      "code-review": "skills/engineering/code-review",
-      "codebase-design": "skills/engineering/codebase-design",
-      "diagnosing-bugs": "skills/engineering/diagnosing-bugs",
-      "domain-modeling": "skills/engineering/domain-modeling",
-      "pr": "skills/engineering/pr",
-      "prototype": "skills/engineering/prototype",
-      "research": "skills/engineering/research",
-      "setup-matt-pocock-skills": "skills/engineering/setup-matt-pocock-skills",
-      "tdd": "skills/engineering/tdd",
-      "triage": "skills/engineering/triage",
-      "wayfinder": "skills/engineering/wayfinder",
-      "wizard": "skills/engineering/wizard",
-      "grill-me": "skills/productivity/grill-me",
-      "grilling": "skills/productivity/grilling",
-      "writing-for-agents": "skills/productivity/writing-for-agents"
-    }
+    "plugin": ".claude-plugin/plugin.json"
   },
   "impeccable": {
     "repo": "pbakaus/impeccable",

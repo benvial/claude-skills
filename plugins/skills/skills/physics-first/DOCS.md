@@ -16,11 +16,13 @@ Tutorials and how-tos drift into each other. A tutorial has drifted when it assu
 
 ## Page skeleton (tutorial, how-to, theory)
 
+Each page covers these seven parts, in this order. The bold names are roles, not headings: never print one as heading text or as a "Role: topic" prefix. A heading says what its section holds, in the reader's words.
+
 1. **Question**: the physical problem in one or two sentences.
 2. **Assumptions**: what is approximated and the regime where it holds.
 3. **Conventions**: units and conventions in play, linked to the conventions page.
 4. **Result**: the shortest code to the answer, then a figure with labelled axes and units.
-5. **Trust**: how the reader checks the result (convergence knob, comparison, sanity limit).
+5. **Checks**: how the reader verifies the result (convergence knob, comparison, sanity limit). Name each check by what it compares: "Power balance and reciprocity", "Against the Mie series", "A finer mesh". Put a check right after the result it checks; checks may be spread through the page. One list of checks at the end is headed "Check your results".
 6. **Limits**: where the method or package breaks, and what to use instead.
 7. **Next**: links to the related theory, how-to and reference pages.
 
@@ -39,7 +41,7 @@ Work on one piece at a time: pick a page, section or paragraph, name the reader'
 ## Completion
 
 Done when:
-- every page is one type and every tutorial/how-to/theory page has all seven skeleton sections;
+- every page is one type and every tutorial/how-to/theory page covers all seven skeleton parts, under headings that name their content;
 - every code block executes in the docs build;
 - every figure has axis labels with units;
 - every gap from the canonical script is either fixed or reported to the human.

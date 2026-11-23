@@ -1,7 +1,7 @@
 {
   "caveman": {
     "repo": "JuliusBrussee/caveman",
-    "ref": "a192894723a8f47e7f504c7b5041967ff1f18e55",
+    "ref": "b89752f6bca5a26bfde8b019813554241800ca99",
     "license": [
       "LICENSE",
       "LICENSE-MIT"
@@ -15,7 +15,7 @@
   },
   "mattpocock": {
     "repo": "mattpocock/skills",
-    "ref": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "ref": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
     "license": [
       "LICENSE"
     ],
@@ -23,7 +23,7 @@
   },
   "impeccable": {
     "repo": "pbakaus/impeccable",
-    "ref": "d41d9860b0094dcb68030657da63461212835aaa",
+    "ref": "b49177d32788f2dc585c42831d845dacf1ebed2c",
     "license": [
       "LICENSE"
     ],
@@ -40,7 +40,7 @@
   },
   "python-skills": {
     "repo": "wdm0006/python-skills",
-    "ref": "4ee48eb8a54b722e7c78da5e0aca8187eedbf988",
+    "ref": "909f594567687291ca8dcfbc491e71758cb3303a",
     "license": [
       "LICENSE"
     ],

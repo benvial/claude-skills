@@ -78,6 +78,14 @@ Done when every spec slice maps to at least one ticket, every ticket carries the
 
 Follow implement-spec on the spec and the tickets from step 4, with the standing answer for every choice it or `code-review` raises.
 
+Dispatch by **agent type**, so the expensive model only does the judgement work:
+
+- implementation tickets, test and lint fixes, docs and tutorials: the `implementer` agent;
+- lookups (finding files and usages, reading logs and job results, watching long jobs): the `scout` agent, or `Explore` for a wide search;
+- decision tickets, the spec, `code-review` and hard numerical debugging: the default subagent, on your own model.
+
+Redo an `implementer` ticket on the default subagent when it reports a loosened check, skips one, or fails the same ticket twice. Where these agents are not installed, fall back to the default subagent with `model: "sonnet"` for implementation and `"haiku"` for lookups. Record in the report which tickets ran on which agent.
+
 Implementer worktrees are fresh checkouts, so local-only agent files (`.scratch/`, `GLOSSARY.md`, `docs/adr/`, anything in `.git/info/exclude`) are missing from them. Give every subagent **absolute paths into the main checkout** for the spec, its ticket, the glossary and the ADRs.
 
 When an implementer finds the spec wrong or incomplete, it reports back instead of improvising. You amend the owning decision ticket, then the spec, then the affected implementation tickets, and redispatch.
